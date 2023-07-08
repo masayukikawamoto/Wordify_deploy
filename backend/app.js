@@ -4,8 +4,10 @@ const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
 const port = process.env.PORT || 3001;
-const URL = process.env.URL;
-const DB_NAME = process.env.DB_NAME;
+const user = process.env.USER;
+const pass = process.env.PASS;
+const url = process.env.URL;
+const db_name = process.env.DB_NAME;
 const Words = require("./models/Words");
 
 const corsOptions = {
@@ -16,7 +18,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors(corsOptions));
 
 mongoose
-  .connect("mongodb+srv://" + URL + DB_NAME + "?retryWrites=true&w=majority")
+  .connect("mongodb+srv://" + user + ":" + pass + url)
   .then(() => {
     console.log("MongoDB connected!");
   })
