@@ -1,0 +1,31 @@
+.header-back {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: #313131;
+  box-shadow: 2px 4px 5px #b48100;
+  color: #ffffff;
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 0 0 50px 50px;
+  align-items: center;
+}
+
+.header-page {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+// .header-page .header-left {
+//   margin: auto auto auto 0;
+// }
+
+// .header-page .header-right {
+//   margin: auto 0 auto auto;
+// }

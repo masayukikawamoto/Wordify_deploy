@@ -1,0 +1,27 @@
+.footer-back {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  background-color: #313131;
+  color: #ffffff;
+  width: 100%;
+  height: 3rem;
+  border-radius: 50px 50px 0 0;
+}
+
+.footer-page {
+  display: flex;
+  width: 70%;
+  margin: auto auto;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-page .footer-left {
+  margin: auto auto 0 0;
+}
+
+.footer-page .footer-right {
+  margin: auto 0 0 auto;
+}
