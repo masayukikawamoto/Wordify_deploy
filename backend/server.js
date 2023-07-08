@@ -8,6 +8,9 @@ const URL = process.env.URL;
 const DB_NAME = process.env.DB_NAME;
 const Words = require("./models/Words");
 
+const corsOptions = {
+  origin: "https://wordifyapp.onrender.com",
+};
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
@@ -66,7 +69,7 @@ app.put("/update/:id", (req, res) => {
       pronunciation: req.body.pronunciation,
       meaning1: req.body.meaning1,
       meaning2: req.body.meaning2,
-      }
+    }
   )
     .then((doc) => console.log(doc))
     .catch((err) => console.log(err));
