@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
   res.send("Express is here.");
 });
 
-app.post("/createword", (req, res) => {
+app.post("/api/createword", (req, res) => {
   Words.create({
     group: req.body.group,
     word: req.body.word,
@@ -40,25 +40,25 @@ app.post("/createword", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-app.get("/allwords", (req, res) => {
+app.get("/api/allwords", (req, res) => {
   Words.find()
     .then((items) => res.json(items))
     .catch((err) => console.log(err));
 });
 
-app.get("/getWords:${query}", (req, res) => {
+app.get("/api/getWords:${query}", (req, res) => {
   Words.find()
     .then((items) => res.json(items))
     .catch((err) => console.log(err));
 });
 
-app.delete("/delete/:id", (req, res) => {
+app.delete("/api/delete/:id", (req, res) => {
   Words.findByIdAndDelete({ _id: req.params.id })
     .then((doc) => console.log(doc))
     .catch((err) => console.log(err));
 });
 
-app.put("/update/:id", (req, res) => {
+app.put("/api/update/:id", (req, res) => {
   console.log(req.params);
   console.log(req.body);
   Words.findByIdAndUpdate(
@@ -75,7 +75,7 @@ app.put("/update/:id", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-app.get("/getgroup", (req, res) => {
+app.get("/api/getgroup", (req, res) => {
   Words.find()
     .then((items) => res.json(items))
     .catch((err) => console.log(err));

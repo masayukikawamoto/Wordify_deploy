@@ -6,14 +6,6 @@ import search_wh from "../img/icon/search_wh.svg";
 import menu_wh from "../img/icon/menu_wh.svg";
 import plus_wh from "../img/icon/plus_wh.svg";
 
-// axios.get("/getWords:${request}")
-//  {
-//   const url = new URL(request.url);
-//   const q = url.searchParams.get("q");
-//   const words = await getwords(q);
-//   return { words };
-// }
-
 export default function Footer() {
   return (
     <>

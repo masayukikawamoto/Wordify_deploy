@@ -33,7 +33,7 @@ export default function CreateWord(props) {
     e.preventDefault();
 
     axios
-      .post("/createword", words)
+      .post("/api/createword", words)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
 

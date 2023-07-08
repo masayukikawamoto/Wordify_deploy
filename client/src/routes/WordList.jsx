@@ -15,7 +15,7 @@ export default function WordLists(props) {
 
   //選択されたグループのワードリストを取得
   axios
-    .get("/allwords")
+    .get("/api/allwords")
     .then((res) => {
       const data = res.data;
       console.log(data);

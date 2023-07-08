@@ -19,7 +19,7 @@ export default function GroupList() {
   //データの取得
   useEffect(() => {
     axios
-      .get("/allwords")
+      .get("/api/allwords")
       .then((res) => {
         setData(res.data);
       })
@@ -81,29 +81,31 @@ export default function GroupList() {
   };
 
   return (
-    <><div className="grouplist">
-      <div className="container">
-        <div>{groupListShow ? <div>{createGroupButtons()}</div> : ""}</div>
-        <div>
-          {wordListShow ? (
-            <button className="btn-bk" onClick={refreshPage}>
-              戻る
-            </button>
-          ) : (
-            ""
-          )}
+    <>
+      <div className="grouplist">
+        <div className="container">
+          <div>{groupListShow ? <div>{createGroupButtons()}</div> : ""}</div>
+          <div>
+            {wordListShow ? (
+              <button className="btn-bk" onClick={refreshPage}>
+                戻る
+              </button>
+            ) : (
+              ""
+            )}
+          </div>
+          <div>{wordList}</div>
         </div>
-        <div>{wordList}</div>
+        <div>
+          <Modal
+            showFlag={showModal}
+            setShowModal={setShowModal}
+            content="ワード詳細"
+            update={updatedWord}
+            selectedWord={selectedWord}
+          />
+        </div>
       </div>
-      <div>
-        <Modal
-          showFlag={showModal}
-          setShowModal={setShowModal}
-          content="ワード詳細"
-          update={updatedWord}
-          selectedWord={selectedWord}
-        />
-      </div></div>
     </>
   );
 }
