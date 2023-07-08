@@ -38,7 +38,7 @@ const Modal = (props) => {
 
   const saveUpdate = () => {
     axios
-      .put(`/update/${update._id}`, update)
+      .put(`https://wordify.onrender.com/update/${update._id}`, update)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
 

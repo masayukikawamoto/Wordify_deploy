@@ -33,7 +33,7 @@ export default function CreateWord(props) {
     e.preventDefault();
 
     axios
-      .post("/api/createword", words)
+      .post("https://wordify.onrender.com/api/createword", words)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
 
