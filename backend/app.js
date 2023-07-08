@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors(corsOptions));
 
 mongoose
-  .connect("mongodb+srv://" + user + ":" + pass + url)
+  .connect("mongodb+srv://" + user + ":" + pass + url + db_name + "/" + "?retryWrites=true&w=majority")
   .then(() => {
     console.log("MongoDB connected!");
   })
