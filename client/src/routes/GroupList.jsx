@@ -19,7 +19,7 @@ export default function GroupList() {
   //データの取得
   useEffect(() => {
     axios
-      .get("api/allwords")
+      .get("https://wordify.onrender.com/api/allwords")
       .then((res) => {
         setData(res.data);
       })
